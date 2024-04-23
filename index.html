@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Loan Calculator</title>
+    <style>
+        .form-align{
+            border: solid 2px #fb0f0f;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: #d4bbbb;
+            margin: 40px;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="form-align">        
+        <form name="loanForm">
+            <h2>Calculate Loan Payments</h2>
+            <table>
+                <tr>
+                   <td colspan="3"><b>Enter Loan Information<br><br></b></td> 
+                </tr>
+                <tr>
+                    <td>Loan amount in currency:<br><br></td>
+                    <td><input type="text" name="loanAmt" id="loanAmtId" size="12" onchange="validateLoanAmount();"><br><br></td>
+                <tr>
+                    <td>Rate of amount in percentage:<br><br></td>
+                    <td><input type="text" name="interest" id="interestId" size="12" onchange="validateNumber(this.id, this.name);"><br><br></td>
+                </tr>
+                <tr>
+                    <td>Repayment period in years:<br><br></td>
+                    <td><input type="text" name="years" id="yearsId" size="12" onchange="validatePeriod(this.id);"><br><br></td>
+                </tr>
+
+                <tr>
+                    <td colspan=2><br><br></td>
+                    <td><input type="button" value="Compute" onclick="calculatePayment()"><br><br></td>
+                </tr>
+            <!-- next -->
+                <tr>
+                    <td colspan="3"><b>Payment Information</b><br><br></td>
+                </tr>
+                <tr>
+                    <td>Monthly payment:<br><br></td>
+                    <td><input type="text" name="monthlyPayment" id="monthlyPaymentId" size="12"><br><br></td>
+                <tr>
+                    <td>Total payment:<br><br></td>
+                    <td><input type="text" name="totalPayment" id="totalPaymentId" size="12"><br><br></td>
+                </tr>
+                <tr>
+                    <td>Total interest payment:<br><br></td>
+                    <td><input type="text" name="totalInterest" id="totalInterestId" size="12"><br><br></td>
+                </tr>
+            </table>            
+        </form>    
+    </div>
+</center>
+<script src="index.js"></script>
+</body>
+</html>
